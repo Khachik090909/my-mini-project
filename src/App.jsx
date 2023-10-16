@@ -18,6 +18,7 @@ function App() {
   //affichage (render)
   return (
     <div>
+      <ContactForm />
       <ContactList
         dataContacts={dataContacts}
         handleRemoveClick={handleRemoveClick}
