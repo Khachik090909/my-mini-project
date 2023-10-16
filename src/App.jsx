@@ -7,7 +7,7 @@ import ContactList from "./components/ContactList";
 function App() {
   //state (état, données)
   const [dataContacts, setDataContacts] = useState(DataContacts);
-
+  console.log(dataContacts);
   //comportements (dynamique)
   const handleRemoveClick = (id) => {
     const removeContact = dataContacts.filter((contact) => contact.id !== id);
