@@ -1,7 +1,7 @@
 import { useState } from "react";
 import DataContacts from "./Data";
 
-function ContactForm() {
+function ContactForm({ setData }) {
   const SubmitFormClick = () => {
     DataContacts.push({
       id: DataContacts[DataContacts.length - 1].id + 1,
@@ -11,7 +11,7 @@ function ContactForm() {
       mail: email,
       img: linkImg,
     });
-    console.log(DataContacts);
+    setData(DataContacts);
   };
 
   const [lastName, setLastName] = useState("");
@@ -35,7 +35,7 @@ function ContactForm() {
       <div className="contact-form">
         <div className="names-form">
           <label>
-            Nom ?
+            Nom
             <input
               type="text"
               value={lastName}
@@ -46,7 +46,7 @@ function ContactForm() {
             ></input>
           </label>
           <label>
-            Prénom ?
+            Prénom
             <input
               type="text"
               value={firstName}
@@ -58,7 +58,7 @@ function ContactForm() {
           </label>
         </div>
         <label>
-          Numéro de telephone ?
+          Téléphone
           <input
             type="text"
             value={phoneNumber}
@@ -69,7 +69,7 @@ function ContactForm() {
           ></input>
         </label>
         <label>
-          Email ?
+          Email
           <input
             type="text"
             value={email}
@@ -80,7 +80,7 @@ function ContactForm() {
           ></input>
         </label>
         <label>
-          Lien Image ?
+          URL image
           <input
             type="text"
             value={linkImg}
@@ -92,7 +92,7 @@ function ContactForm() {
         </label>
       </div>
       <div>
-        <button type="submit"> Submit</button>
+        <button type="submit">Soumettre</button>
       </div>
     </form>
   );
