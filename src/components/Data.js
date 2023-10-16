@@ -16,3 +16,5 @@ const DataContacts = [
     img: "https://upload.wikimedia.org/wikipedia/en/0/0b/Marge_Simpson.png",
   },
 ];
+
+export default DataContacts

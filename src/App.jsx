@@ -1,14 +1,15 @@
-import React from 'react'
-import DataContacts from './components/Data'
-import './App.css'
+import React from "react";
+import { useState } from "react";
+// import DataContacts from "./components/Data";
+import ContactForm from "./components/ContactForm";
+import "./App.css";
 
 function App() {
-
-
   return (
-    
-  <div></div>
-  )
+    <div>
+      <ContactForm />
+    </div>
+  );
 }
 
-export default App
+export default App;
