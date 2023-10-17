@@ -1,0 +1,50 @@
+#root {
+    background-color: #9F6E33;
+    border-radius: 30px;
+}
+
+.contact-form {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3,1fr);
+    row-gap: 10px;
+    padding-bottom: 20px;
+}
+
+#image-url {
+    grid-column-end: 1;
+    grid-column-start: 3;
+}
+
+#image-url input {
+    width: 90%;
+}
+
+.form-label {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.names-form {
+    display: flex;
+}
+
+input{
+    border-radius: 100px;
+    text-align: center;
+}
+
+#submit-button{
+    background-color: #33639E;
+    font-weight: bold;
+    transition: transform .5s;
+    margin-bottom: 20px;
+}
+
+#submit-button:hover {
+    background-color: white;
+    color: black;
+    transform: scale(1.3);
+}
