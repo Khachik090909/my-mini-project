@@ -15,22 +15,12 @@ function App() {
     setData(removeContact);
   };
 
-  const addNewContact = (newContact) => {
-    const newId = data.length + 1;
-    newContact.id = newId;
-    setData([...data, newContact]);
-  };
-
   //affichage (render)
   return (
-    <>
-      <div>
-        <ContactForm addNewContact={addNewContact} />
-      </div>
-      <div>
-        <ContactList data={data} handleRemoveClick={handleRemoveClick} />
-      </div>
-    </>
+    <div>
+      <ContactForm data={data} setData={setData} />
+      <ContactList data={data} handleRemoveClick={handleRemoveClick} />
+    </div>
   );
 }
 

@@ -23,22 +23,6 @@ const DataContacts = [
     mail: "bart.simpson@gmail.com",
     img: "https://i.pinimg.com/originals/72/d2/1c/72d21c5719428e4389039a78db528f73.png",
   },
-  {
-    id: 4,
-    prenom: "Lisa",
-    nom: "Simpson",
-    tel: "06 12 34 56 22",
-    mail: "lisa.simpson@gmail.com",
-    img: "https://www.simpsonspark.com/images/persos/contributions/lisa-simpson-22921.jpg",
-  },
-  {
-    id: 5,
-    prenom: "Maggie",
-    nom: "Simpson",
-    tel: "06 12 34 56 33",
-    mail: "maggie.simpson@gmail.com",
-    img: "https://sketchok.com/images/articles/01-cartoons/001-simpsons/10/08.jpg",
-  },
 ];
 
 export default DataContacts;
