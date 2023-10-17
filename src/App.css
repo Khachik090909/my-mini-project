@@ -15,6 +15,7 @@ body {
   row-gap: 1rem;
   background-color: rgb(159, 110, 51);
   padding: 2rem;
+  padding-top: 0rem;
   border-radius: 20px;
 }
 .contactList {

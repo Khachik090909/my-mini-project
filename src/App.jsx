@@ -19,6 +19,7 @@ function App() {
   return (
     <div>
       <ContactForm data={data} setData={setData} />
+      <hr></hr>
       <ContactList data={data} handleRemoveClick={handleRemoveClick} />
     </div>
   );
