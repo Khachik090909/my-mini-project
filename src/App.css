@@ -4,7 +4,18 @@
   padding: 2rem;
   text-align: center;
 }
-
+.objectEnlarge {
+  background-color: royalblue;
+  z-index: 1000;
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
 body {
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
