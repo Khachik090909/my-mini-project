@@ -1,28 +1,25 @@
 import React from "react";
-import { useState, useEffect } from "react";
-import DataContacts from "./components/Data";
+import { useState } from "react";
 import "./App.css";
+import DataContacts from "./components/Data";
 import ContactList from "./components/ContactList";
+import ContactForm from "./components/ContactForm";
 
 function App() {
   //state (état, données)
-  const [dataContacts, setDataContacts] = useState(DataContacts);
+  const [data, setData] = useState(DataContacts);
 
   //comportements (dynamique)
   const handleRemoveClick = (id) => {
-    const removeContact = dataContacts.filter((contact) => contact.id !== id);
-    setDataContacts(removeContact);
-    console.log(removeContact);
+    const removeContact = data.filter((contact) => contact.id !== id);
+    setData(removeContact);
   };
 
   //affichage (render)
   return (
     <div>
-      <ContactForm />
-      <ContactList
-        dataContacts={dataContacts}
-        handleRemoveClick={handleRemoveClick}
-      />
+      <ContactForm data={data} setData={setData} />
+      <ContactList data={data} handleRemoveClick={handleRemoveClick} />
     </div>
   );
 }

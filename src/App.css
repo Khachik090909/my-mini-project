@@ -65,6 +65,22 @@ body {
 .logo.react:hover {
   filter: drop-shadow(0 0 2em #61dafbaa);
 }
+.mainForm {
+  width: 100%;
+  height: auto;
+  margin-bottom: 3rem;
+}
+
+.formContact {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: 1fr 1fr;
+}
+.formContact h2 {
+  display: grid;
+  grid-column-start: 1;
+  grid-column-end: 7;
+}
 
 @keyframes logo-spin {
   from {
