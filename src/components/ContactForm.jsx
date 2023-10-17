@@ -35,7 +35,7 @@ function ContactForm() {
       <div className="contact-form">
         <div className="names-form">
           <label>
-            Nom ?
+            Nom
             <input
               type="text"
               value={lastName}
@@ -46,7 +46,7 @@ function ContactForm() {
             ></input>
           </label>
           <label>
-            Prénom ?
+            Prénom
             <input
               type="text"
               value={firstName}
@@ -58,7 +58,7 @@ function ContactForm() {
           </label>
         </div>
         <label>
-          Numéro de telephone ?
+          Numéro de telephone
           <input
             type="text"
             value={phoneNumber}
@@ -69,7 +69,7 @@ function ContactForm() {
           ></input>
         </label>
         <label>
-          Email ?
+          Email
           <input
             type="text"
             value={email}
@@ -80,7 +80,7 @@ function ContactForm() {
           ></input>
         </label>
         <label>
-          Lien Image ?
+          Lien Image
           <input
             type="text"
             value={linkImg}
