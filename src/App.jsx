@@ -19,7 +19,9 @@ function App() {
   return (
     <div>
       <ContactForm data={data} setData={setData} />
-      <ContactList handleRemoveClick={handleRemoveClick} dataContacts={DataContacts} setUnfoldedContact={setUnfoldedContact}/>
+      <hr></hr>
+      
+      <ContactList data={data}   handleRemoveClick={handleRemoveClick} setUnfoldedContact={setUnfoldedContact}/>
       {unfoldedContact && <ContactUnfolded unfoldedContact={unfoldedContact} setUnfoldedContact={setUnfoldedContact} />}
     </div>
   );

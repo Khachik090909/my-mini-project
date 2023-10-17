@@ -1,5 +1,6 @@
 import { useState } from "react";
 import DataContacts from "./Data";
+import "./ContactForm.css";
 
 function ContactForm({ data, setData }) {
   const SubmitFormClick = () => {
@@ -36,66 +37,71 @@ function ContactForm({ data, setData }) {
       }}
     >
       <div className="contact-form">
-        <div className="names-form">
-          <label>
-            Nom
-            <input
-              type="text"
-              value={lastName}
-              onChange={(event) => {
-                setLastName(event.target.value);
-              }}
-              id="input-last-name"
-            ></input>
-          </label>
-          <label>
-            Prénom
-            <input
-              type="text"
-              value={firstName}
-              onChange={(event) => {
-                setFirstName(event.target.value);
-              }}
-              id="input-first-name"
-            ></input>
-          </label>
-        </div>
-        <label>
-          Téléphone
+        <div id="names-form" className="form-label">
+          <label>Nom</label>
           <input
             type="text"
+            placeholder="Doe"
+            value={lastName}
+            onChange={(event) => {
+              setLastName(event.target.value);
+            }}
+            id="input-last-name"
+          ></input>
+        </div>
+        <div id="firstname-form" className="form-label">
+          <label>Prénom</label>
+          <input
+            type="text"
+            placeholder="John"
+            value={firstName}
+            onChange={(event) => {
+              setFirstName(event.target.value);
+            }}
+            id="input-first-name"
+          ></input>
+        </div>
+        <div id="phone" className="form-label">
+          <label>Téléphone</label>
+          <input
+            type="text"
+            placeholder="06 ?? ?? ?? ??"
             value={phoneNumber}
             onChange={(event) => {
               setPhoneNumber(event.target.value);
             }}
             id="input-number"
           ></input>
-        </label>
-        <label>
-          Email
+        </div>
+        <div id="mail" className="form-label">
+          <label>Email</label>
           <input
             type="text"
+            placeholder="exemple@mail.com"
             value={email}
             onChange={(event) => {
               setEmail(event.target.value);
             }}
             id="input-mail"
           ></input>
-        </label>
-        <label>
-          URL image
+        </div>
+        <div id="image-url" className="form-label">
+          <label>URL image</label>
           <input
             type="text"
+            placeholder="Put the link of you're image here"
             value={linkImg}
             onChange={(event) => {
               setLinkImg(event.target.value);
             }}
             id="input-img"
           ></input>
-        </label>
+        </div>
       </div>
       <div>
-        <button type="submit">Soumettre</button>
+        <button id="submit-button" type="submit">
+          Soumettre
+        </button>
       </div>
     </form>
   );

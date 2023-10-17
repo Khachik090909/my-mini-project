@@ -1,9 +1,9 @@
-function ContactList({ dataContacts,  setUnfoldedContact, handleRemoveClick}) {
+function ContactList({data, setUnfoldedContact, handleRemoveClick}) {
   //state (état, données)
 
   //comportements (dynamique)
   const handleUnfolded = (id) => {
-    setUnfoldedContact(dataContacts.filter((contact) => contact.id === id));
+    setUnfoldedContact(data.filter((contact) => contact.id === id));
     
   }
 
@@ -11,8 +11,8 @@ function ContactList({ dataContacts,  setUnfoldedContact, handleRemoveClick}) {
   //affichage (render)
   return (
     <div className="mainContainer">
-      <h1>Liste de Contatcs</h1>
-      {dataContacts.map((elem) => (
+      <h1>Mes Contacts</h1>
+      {data.map((elem) => (
         <li className="contactList" key={elem.id}>
           <img onClick={() => handleUnfolded(elem.id)} src={elem.img} alt={elem.prenom} />
           <p>{elem.nom}</p>
