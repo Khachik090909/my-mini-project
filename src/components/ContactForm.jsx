@@ -1,100 +1,78 @@
 import { useState } from "react";
 import DataContacts from "./Data";
 
-function ContactForm({ setData }) {
-  const SubmitFormClick = () => {
-    DataContacts.push({
-      id: DataContacts[DataContacts.length - 1].id + 1,
-      nom: lastName,
-      prenom: firstName,
-      tel: phoneNumber,
-      mail: email,
-      img: linkImg,
-    });
-    setData(DataContacts);
+function ContactForm({ addNewContact }) {
+  // state (état, données)
+  const [contact, setContact] = useState({
+    nom: "",
+    prenom: "",
+    tel: "",
+    mail: "",
+    img: "",
+  });
+
+  // comportements (dynamique)
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setContact({ ...contact, [name]: value });
   };
 
-  const [lastName, setLastName] = useState("");
-  const [firstName, setFirstName] = useState("");
-  const [phoneNumber, setPhoneNumber] = useState("");
-  const [email, setEmail] = useState("");
-  const [linkImg, setLinkImg] = useState("");
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    addNewContact(contact);
 
+    setContact({
+      nom: "",
+      prenom: "",
+      tel: "",
+      mail: "",
+      img: "",
+    });
+  };
+
+  // affichage (render)
   return (
-    <form
-      onSubmit={(e) => {
-        e.preventDefault();
-        SubmitFormClick();
-        setLastName("");
-        setFirstName("");
-        setPhoneNumber("");
-        setEmail("");
-        setLinkImg("");
-      }}
-    >
-      <div className="contact-form">
-        <div className="names-form">
-          <label>
-            Nom
-            <input
-              type="text"
-              value={lastName}
-              onChange={(event) => {
-                setLastName(event.target.value);
-              }}
-              id="input-last-name"
-            ></input>
-          </label>
-          <label>
-            Prénom
-            <input
-              type="text"
-              value={firstName}
-              onChange={(event) => {
-                setFirstName(event.target.value);
-              }}
-              id="input-first-name"
-            ></input>
-          </label>
-        </div>
-        <label>
-          Téléphone
-          <input
-            type="text"
-            value={phoneNumber}
-            onChange={(event) => {
-              setPhoneNumber(event.target.value);
-            }}
-            id="input-number"
-          ></input>
-        </label>
-        <label>
-          Email
-          <input
-            type="text"
-            value={email}
-            onChange={(event) => {
-              setEmail(event.target.value);
-            }}
-            id="input-mail"
-          ></input>
-        </label>
-        <label>
-          URL image
-          <input
-            type="text"
-            value={linkImg}
-            onChange={(event) => {
-              setLinkImg(event.target.value);
-            }}
-            id="input-img"
-          ></input>
-        </label>
-      </div>
-      <div>
+    <div className="mainForm">
+      <form className="formContact" onSubmit={handleSubmit}>
+        <h2>Ajouter un Contact</h2>
+        <input
+          type="text"
+          name="nom"
+          placeholder="Nom"
+          value={contact.nom}
+          onChange={handleInputChange}
+        />
+        <input
+          type="text"
+          name="prenom"
+          placeholder="Prénom"
+          value={contact.prenom}
+          onChange={handleInputChange}
+        />
+        <input
+          type="text"
+          name="tel"
+          placeholder="Téléphone"
+          value={contact.tel}
+          onChange={handleInputChange}
+        />
+        <input
+          type="email"
+          name="mail"
+          placeholder="E-mail"
+          value={contact.mail}
+          onChange={handleInputChange}
+        />
+        <input
+          type="text"
+          name="img"
+          placeholder="URL de l'image"
+          value={contact.img}
+          onChange={handleInputChange}
+        />
         <button type="submit">Soumettre</button>
-      </div>
-    </form>
+      </form>
+    </div>
   );
 }
 
