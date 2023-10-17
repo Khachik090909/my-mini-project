@@ -1,5 +1,5 @@
 .objectEnlarge {
-  background-color: royalblue;
+  background-color: rgba(11, 11, 12, 0.944);
   z-index: 1000;
   position: absolute;
   top: 0;
@@ -9,4 +9,22 @@
   width: 100%;
   height: 100vh;
   overflow: hidden;
+}
+
+.objectEnlarge img {
+  border-radius: 100%;
+}
+.objectEnlarge p {
+  font-size: 2rem;
+  color: white;
+}
+.objectEnlarge h3 {
+  font-size: 2rem;
+  color: white;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.objectEnlarge h3:hover {
+  scale: 1.3;
 }

@@ -11,10 +11,10 @@ function ContactUnfolded({unfoldedContact, setUnfoldedContact}) {
     <h3 onClick={()=>{setUnfoldedContact("")}}>retur</h3>
      
     <img src={unfoldedContact[0].img} alt={unfoldedContact[0].prenom} />
+    <p>{unfoldedContact[0].nom}</p>
     <p>{unfoldedContact[0].prenom}</p>
     <p>{unfoldedContact[0].tel}</p>
     <p>{unfoldedContact[0].mail}</p>
-    <p>{unfoldedContact[0].nom}</p>
   </div>
   );
 }

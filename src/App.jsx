@@ -1,10 +1,8 @@
 import React from "react";
 import { useState } from "react";
 import "./App.css";
-import { useState, } from "react";
 import DataContacts from "./components/Data";
 import ContactList from "./components/ContactList";
-import ContactForm from "./components/ContactForm";
 import ContactForm from "./components/ContactForm";
 import ContactUnfolded from "./components/ContactUnfolded";
 function App() {
@@ -21,7 +19,8 @@ function App() {
   return (
     <div>
       <ContactForm data={data} setData={setData} />
-      <ContactList data={data} handleRemoveClick={handleRemoveClick} />
+      <ContactList handleRemoveClick={handleRemoveClick} dataContacts={DataContacts} setUnfoldedContact={setUnfoldedContact}/>
+      {unfoldedContact && <ContactUnfolded unfoldedContact={unfoldedContact} setUnfoldedContact={setUnfoldedContact} />}
     </div>
   );
 }
