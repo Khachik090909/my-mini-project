@@ -1,4 +1,4 @@
-function ContactList({ dataContacts,setDataContacts,  setUnfoldedContact}) {
+function ContactList({ data,setDataContacts,  setUnfoldedContact}) {
   //state (état, données)
 
   //comportements (dynamique)
@@ -13,8 +13,8 @@ function ContactList({ dataContacts,setDataContacts,  setUnfoldedContact}) {
   //affichage (render)
   return (
     <div className="mainContainer">
-      <h1>Liste de Contatcs</h1>
-      {dataContacts.map((elem) => (
+      <h1>Liste de Contacts</h1>
+      {data.map((elem) => (
         <li className="contactList" key={elem.id}>
           <img onClick={()=> handleUnfolded(elem.id)} src={elem.img} alt={elem.prenom} />
           <p>{elem.nom}</p>
