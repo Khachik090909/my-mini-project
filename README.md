@@ -21,7 +21,7 @@ Ce projet a été créé dans le but de découvrir et d'apprendre les concepts f
 1. Clonez le projet sur votre machine locale :
 
    ```bash
-   git clone https://github.com/votre-utilisateur/mini-projet-react-contacts.git
+   git clone git@github.com:Khachik090909/my-mini-project.git
    cd mini-projet-react-contacts
    npm i
 
