@@ -1,6 +1,6 @@
 # Mini-Projet React - Gestion de Contacts
 
-Ce projet a été créé dans le but de découvrir et d'apprendre les concepts fondamentaux de React, en mettant en œuvre les opérations CRUD (Create, Read, Update, Delete) avec un système de gestion de contacts.
+Ce projet a été créé dans le but de découvrir et d'apprendre les concepts fondamentaux de React, en simulant la mise en œuvre des opérations CRUD (Create, Read, Update, Delete) avec un système de gestion de contacts.
 
 ## Fonctionnalités
 
